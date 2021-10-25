@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@media only screen and (min-width: 1000px) and (max-width: 1800px) {
+@media only screen and (min-width: 1000px) and (max-width: 2000px) {
   body {
     max-width: 1200px;
     margin: auto;
@@ -921,7 +921,7 @@
     color: white;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (max-width: 2000px) {
   body {
     max-width: 1200px;
     margin: auto;
@@ -1377,7 +1377,6 @@
   body {
     max-width: 480px;
     margin: auto;
-    background: linear-gradient(90deg, #060606 11%, #7a1b68 64%);
   }
 
   header {
