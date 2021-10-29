@@ -5,6 +5,7 @@
 
 *{
   scroll-behavior: smooth;
+
 }
 //Desktop Screen
 @media only screen and (min-width: 1000px) and (max-width: 2000px) {
@@ -570,7 +571,7 @@
 
 // Tablet
 
-@media only screen and (min-width: 582px) and (max-width: 800px) {
+@media only screen and (min-width: 581px) and (max-width: 800px) {
   body {
     max-width: 700px;
     margin: auto;
@@ -837,10 +838,16 @@
   }
 }
 
-@media only screen and (max-width: 580px) {
+
+
+@media only screen  and (max-width: 580px) {
+
+
   body {
+
     max-width: 480px;
     margin: auto;
+
   }
 
   header {
