@@ -7,6 +7,13 @@
   scroll-behavior: smooth;
 
 }
+
+body{
+  display: flex;
+  justify-content: center;
+
+  // flex-direction: column;
+}
 //Desktop Screen
 @media only screen and (min-width: 1000px) and (max-width: 2000px) {
   body {
@@ -263,6 +270,7 @@
     &__legal {
       display: flex;
       flex-direction: column;
+      padding-top: 0.5rem;
       & > p {
         margin: 0;
       }
