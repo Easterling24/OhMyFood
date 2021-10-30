@@ -83,6 +83,7 @@ header {
   }
   .instruction > h2 {
     font-size: 2rem;
+    padding-top: 1rem;
     margin-top: 0;
   }
   .instruction__options {
@@ -1041,6 +1042,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: auto !important;
+  min-height: 100vh;
 }
 
 @media only screen and (min-width: 1100px) and (max-width: 2000px) {
@@ -1621,7 +1624,7 @@ body {
 
   .container {
     position: relative;
-    min-height: 195vh;
+    min-height: 170vh;
     display: flex;
     justify-content: center;
   }
@@ -2503,9 +2506,10 @@ body {
 
   .container {
     position: relative;
-    height: 200vh;
+    height: 170vh;
     font-family: "Roboto";
     display: flex;
+    background-color: #fff;
     justify-content: center;
   }
   .container__img {
@@ -2533,8 +2537,8 @@ body {
     background: #fff;
     border-radius: 25px 25px 0 0;
     position: absolute;
+    height: auto;
     top: 12%;
-    height: 180vh;
     width: 100%;
   }
   .container__box--icon {
@@ -2876,7 +2880,7 @@ body {
     border-radius: 30px;
     background: linear-gradient(#9356DC, #FF79DA);
     position: absolute;
-    bottom: 3%;
+    bottom: 4%;
     cursor: pointer;
     display: flex;
     justify-content: center;
