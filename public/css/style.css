@@ -1624,7 +1624,7 @@ body {
 
   .container {
     position: relative;
-    min-height: 170vh;
+    min-height: 190vh;
     display: flex;
     justify-content: center;
   }
@@ -1637,7 +1637,7 @@ body {
   }
   .container__box {
     width: 100%;
-    height: 160vh;
+    height: 157vh;
     background: #fff;
     position: absolute;
     top: 18%;
