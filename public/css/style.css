@@ -9,11 +9,75 @@
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 header {
   box-shadow: 0px 4px 4px #c0b2b2;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 2000px) {
+.progress {
+  max-width: 80vw;
+  max-height: 100vh;
+  height: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1.5px solid #494949;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.progress__bar {
+  width: 100%;
+  height: 95%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #020024 0%, #6e0979 35%, #9500ff 80%);
+  animation: bar_filled 4500ms both;
+  transform: scaleX(1);
+  transform-origin: left;
+  box-shadow: 0 0 15px #9356DC;
+}
+
+@keyframes bar_filled {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0);
+  }
+  75% {
+    opacity: 0.7;
+    transform: scaleX(0.7);
+  }
+  90% {
+    opacity: 0.9;
+    transform: scaleX(0.9);
+    animation-delay: 320ms;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+.content-loaded {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: content-load 0ms 4.5s both;
+}
+
+@keyframes content-load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1000px) {
   body {
     max-width: 1200px;
     margin: auto;
@@ -769,6 +833,7 @@ header {
     background: #e7e3e3;
     position: relative;
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -1038,18 +1103,35 @@ header {
     color: white;
   }
 }
+.restaurants__card {
+  transform: scale(1);
+  transition: transform 330ms ease-in-out;
+}
+.restaurants__card:hover {
+  transform: scale(0.8);
+}
+
 body {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: auto !important;
-  min-height: 100vh;
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 2000px) {
+@media only screen and (min-width: 1100px) {
   body {
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .loop {
+    width: 400px;
+  }
+  .loop__item > i {
+    font-size: 60px;
   }
 
   header {
@@ -2483,10 +2565,17 @@ body {
   body {
     max-width: 470px;
     margin: auto;
+    align-items: center;
+  }
+
+  .loop {
+    width: 100px;
   }
 
   header {
     position: relative;
+    box-shadow: 0px;
+    width: 100%;
   }
 
   .logo {
@@ -2506,16 +2595,16 @@ body {
 
   .container {
     position: relative;
-    height: 170vh;
     font-family: "Roboto";
     display: flex;
     background-color: #fff;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .container__img {
-    object-fit: cover;
     width: 100%;
-    height: 300px;
+    height: 250px;
   }
   .container__img > img {
     object-fit: cover;
@@ -2536,9 +2625,7 @@ body {
   .container__box {
     background: #fff;
     border-radius: 25px 25px 0 0;
-    position: absolute;
-    height: auto;
-    top: 12%;
+    position: relative;
     width: 100%;
   }
   .container__box--icon {
@@ -2606,7 +2693,7 @@ body {
     overflow-x: hidden;
   }
   .container__entry__options--card:hover .container__entry__options--right {
-    transform: scaleX(1);
+    transform: translateX(0);
     border-radius: 0 25px 25px 0;
   }
   .container__entry__options--card:hover .option--price {
@@ -2616,13 +2703,13 @@ body {
   .container__entry__options--card:hover .container__entry__options--desc > h2 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 250px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover .container__entry__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover i {
@@ -2641,9 +2728,17 @@ body {
   .container__entry__options--desc > h3 {
     margin-bottom: 0;
     transition: all 330ms ease-in-out;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    overflow-x: hidden;
   }
   .container__entry__options--desc p {
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    overflow-x: hidden;
   }
   .container__entry__options--desc > div {
     display: flex;
@@ -2660,14 +2755,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scaleX(0);
-    transform-origin: 100%;
+    transform-origin: right;
     background: #99E2D0;
+    transform: translateX(120%);
     transition: all 330ms ease-in-out;
   }
   .container__entry__options--right > i {
     color: white;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition: transform 330ms ease-in-out;
   }
   .container__main {
@@ -2696,9 +2791,19 @@ body {
     width: 90%;
     margin-bottom: 1rem;
     overflow-x: hidden;
+    animation: items-fade 600ms;
+  }
+  .container__main__options--card--1 {
+    animation-delay: 200ms;
+  }
+  .container__main__options--card--2 {
+    animation-delay: 400ms;
+  }
+  .container__main__options--card--3 {
+    animation-delay: 600ms;
   }
   .container__main__options--card:hover .container__main__options--right {
-    transform: scaleX(1);
+    transform: translateX(0);
     border-radius: 0 25px 25px 0;
   }
   .container__main__options--card:hover .option--price {
@@ -2708,13 +2813,13 @@ body {
   .container__main__options--card:hover .container__main__options--desc > h2 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 250px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__main__options--card:hover .container__main__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 180px;
     overflow-x: hidden;
     transition: all 400ms ease-in-out;
   }
@@ -2734,12 +2839,16 @@ body {
   .container__main__options--desc > h3 {
     margin-bottom: 0;
     transition: all 330ms ease-in-out;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    overflow-x: hidden;
   }
   .container__main__options--desc p {
     margin: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__main__options--desc > div {
@@ -2757,7 +2866,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scaleX(0);
+    transform: translateX(120px);
     transform-origin: 100%;
     background: #99E2D0;
     transition: all 330ms ease-in-out;
@@ -2792,7 +2901,7 @@ body {
     overflow-x: hidden;
   }
   .container__desert__options--card:hover .container__desert__options--right {
-    transform: scaleX(1);
+    transform: translateX(0);
     border-radius: 0 25px 25px 0;
   }
   .container__desert__options--card:hover .option--price {
@@ -2802,13 +2911,13 @@ body {
   .container__desert__options--card:hover .container__desert__options--desc > h2 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 250px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover .container__desert__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover i {
@@ -2827,12 +2936,16 @@ body {
   .container__desert__options--desc > h3 {
     margin-bottom: 0;
     transition: all 330ms ease-in-out;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    overflow-x: hidden;
   }
   .container__desert__options--desc p {
     margin: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 180px;
     overflow-x: hidden;
   }
   .container__desert__options--desc > div {
@@ -2850,7 +2963,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scaleX(0);
+    transform: translateX(120px);
     transform-origin: 100%;
     background: #99E2D0;
     transition: all 330ms ease-in-out;
@@ -2879,8 +2992,9 @@ body {
     width: 60%;
     border-radius: 30px;
     background: linear-gradient(#9356DC, #FF79DA);
-    position: absolute;
-    bottom: 4%;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -2931,11 +3045,8 @@ body {
     padding-top: 1rem;
     font-family: "Roboto";
   }
-  .footer__logo {
-    height: 25px;
-    width: 150px;
-    margin-bottom: 1rem;
-    filter: invert(100%) sepia(6%) saturate(1800%) hue-rotate(293deg) brightness(108%) contrast(101%);
+  .footer__title {
+    margin-bottom: 0;
   }
   .footer__suggest {
     display: flex;
@@ -2947,6 +3058,7 @@ body {
   }
   .footer__suggest > h3 {
     margin-left: 1rem;
+    margin: 0.5rem;
     color: white;
   }
   .footer__partner {
@@ -2957,6 +3069,7 @@ body {
   }
   .footer__partner > h3 {
     margin-left: 1rem;
+    margin: 0.5rem;
     color: white;
   }
   .footer__legal > p {
@@ -2992,108 +3105,119 @@ body {
   justify-content: center;
   align-items: center;
   color: #9356DC;
-  margin: 0.7rem;
-  animation: burger 500ms backwards infinite ease-in-out alternate;
+  margin: 1rem;
+  animation: burger 800ms backwards infinite ease-in-out alternate;
 }
 .loop__item--1 {
-  animation-delay: 100ms;
+  animation-delay: 160ms;
 }
 .loop__item--2 {
-  animation-delay: 200ms;
+  animation-delay: 320ms;
 }
 .loop__item--3 {
-  animation-delay: 300ms;
+  animation-delay: 480ms;
 }
 .loop__item--4 {
-  animation-delay: 400ms;
+  animation-delay: 640ms;
 }
 .loop__item--5 {
-  animation-delay: 500ms;
+  animation-delay: 800ms;
 }
 .loop__item > i {
   font-size: 3rem;
 }
 
 .content__loaded {
-  animation: content 0ms 1100ms both;
+  animation: content_loading both;
+  animation-delay: 3s;
   position: absolute;
-  top: 0;
+  height: 100%;
   width: 100%;
 }
 
-@keyframes content {
-  0% {
-    opacity: 0;
-  }
-}
-@keyframes burger {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
-.container__entry__options--card {
-  animation: item__fade__in 200ms both;
-  cursor: pointer;
-}
-
-.options__entry__card--1 {
-  animation-delay: 1200ms;
-}
-
-.options__entry__card--2 {
-  animation-delay: 1500ms;
-}
-
-.options__entry__card--3 {
-  animation-delay: 1700ms;
-}
-
-.container__main__options--card {
-  animation: item__fade__in 200ms both;
-  cursor: pointer;
-}
-
-.options__main__card--1 {
-  animation-delay: 1800ms;
-}
-
-.options__main__card--2 {
-  animation-delay: 1900ms;
-}
-
-.options__main__card--3 {
-  animation-delay: 2000ms;
-}
-
-.container__desert__options--card {
-  animation: item__fade__in 200ms both;
-  cursor: pointer;
-}
-
-.options__desert__card--1 {
-  animation-delay: 2100ms;
-}
-
-.options__desert__card--2 {
-  animation-delay: 2200ms;
-}
-
-.options__desert__card--3 {
-  animation-delay: 2300ms;
-}
-
-@keyframes item__fade__in {
+@keyframes content_loading {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+@keyframes burger {
   0% {
-    transform: translateX(-90%);
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+.container__entry__options--card {
+  animation-delay: 4s;
+  animation: items-fade 200ms both;
+}
+.container__entry__options--card--1 {
+  animation-delay: 150ms;
+}
+.container__entry__options--card--2 {
+  animation-delay: 300ms;
+}
+.container__entry__options--card--3 {
+  animation-delay: 450ms;
+}
+
+.container__main__options--card {
+  animation: items-fade 260ms both;
+}
+.container__main__options--card--1 {
+  animation-delay: 150ms;
+}
+.container__main__options--card--2 {
+  animation-delay: 300ms;
+}
+.container__main__options--card--3 {
+  animation-delay: 450ms;
+}
+
+.container__desert__options--card {
+  animation: items-fade 300ms both;
+}
+.container__desert__options--card--1 {
+  animation-delay: 200ms;
+}
+.container__desert__options--card--2 {
+  animation-delay: 400ms;
+}
+.container__desert__options--card--3 {
+  animation-delay: 600ms;
+}
+
+@keyframes items-fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container__entry__options {
+  animation: entry both 4s;
+}
+
+.container__main__options {
+  animation: entry ease 1.5s;
+}
+
+.container__desert__options {
+  animation: entry ease 1.5s;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
