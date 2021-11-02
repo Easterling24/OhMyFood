@@ -25,6 +25,7 @@ header {
   border-radius: 20px;
   border: 1.5px solid rgb(73, 73, 73);
   display: flex;
+
   justify-content: center;
   align-items: center;
   z-index: -1;
@@ -39,7 +40,7 @@ header {
       rgba(110, 9, 121, 1) 35%,
       rgba(149, 0, 255, 1) 80%
     );
-    animation: bar_filled 4500ms both;
+    animation: bar_filled 2500ms both;
     transform: scaleX(1);
     transform-origin: left;
     box-shadow: 0 0 15px $cd-primary;
@@ -55,13 +56,13 @@ header {
   75% {
     opacity: 0.7;
     transform: scaleX(0.7);
-    // animation-delay: 150ms;
+
   }
 
   90% {
     opacity: 0.9;
     transform: scaleX(0.9);
-    animation-delay: 320ms;
+    animation-delay: 120ms;
   }
 
   100% {
@@ -73,7 +74,7 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: content-load 0ms 4.5s both;
+  animation: content-load 0ms 2.5s both;
 }
 
 @keyframes content-load {
@@ -620,8 +621,10 @@ header {
     &__legal {
       display: flex;
       flex-direction: column;
+      padding-top: 1.5rem;
       & > p {
         margin: 0;
+        margin-bottom: .5rem;
       }
     }
 
@@ -865,6 +868,7 @@ header {
       flex-direction: row;
       align-items: center;
       & > h3 {
+     
         margin-left: 10px;
       }
     }
@@ -874,14 +878,18 @@ header {
       flex-direction: row;
       align-items: center;
       & > h3 {
+     
         margin-left: 10px;
       }
     }
     &__legal {
       display: flex;
       flex-direction: column;
+      padding-top: 2rem;
       & > p {
-        margin: 0;
+        
+        margin-top: 0;
+        margin-bottom: 0.5rem;
       }
     }
 
