@@ -18,8 +18,9 @@ header {
 }
 
 .progress {
-  max-width: 80vw;
+  max-width: 1200px;
   max-height: 100vh;
+  position: fixed;
   height: 20px;
   width: 100%;
   border-radius: 20px;

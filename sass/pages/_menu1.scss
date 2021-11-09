@@ -2245,12 +2245,12 @@ body {
   background: rgb(24, 5, 5);
 }
 
-$prog-bar-dur: 1000ms;
-$prog-bar_delay: 100ms;
-$content: $prog-bar-dur + $prog-bar_delay;
+// $prog-bar-dur: 1000ms;
+// $prog-bar_delay: 100ms;
+// $content: $prog-bar-dur + $prog-bar_delay;
 
 $num-items: 5;
-$anim-duration: 800ms;
+$anim-duration: 500ms;
 $anim-delay: $anim-duration / $num-items;
 $size: 3rem;
 
@@ -2265,9 +2265,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
   height: 10vh;
- 
-
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -2293,17 +2292,33 @@ body {
 }
 
 .content__loaded {
-  animation: content_loading both;
-  animation-delay: 3s;
-
+ 
+  animation: content_loading 0s 1s both;
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
+// .container__box{
+//   animation: box_fade 0ms 2s both;
+// }
+
+
+// @keyframes box_fade {
+//   0%{
+//     opacity: 0;
+//   }
+
+//   100%{
+//     opacity: 1;
+//   }
+  
+// }
+
 @keyframes content_loading {
   0% {
     opacity: 0;
+    animation-delay: 2s;
   }
   100% {
     opacity: 1;
@@ -2315,42 +2330,52 @@ body {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.6);
+    transform: scale(1.2);
   }
 }
 
-$animation-duration: 500ms;
-$animation-delay: $animation-duration / 3;
+// $animation-duration: 500ms;
+// $animation-delay: $animation-duration / 3;
+
+// .container__entry{
+//   animation: container__entry 2s both;
+  
+// }
+
+// .container__entry{
+//   transition: all 5s;
+// }
 
 .container__entry__options--card {
-  animation-delay: 4s;
-  animation: items-fade 200ms both;
  
+  animation: items-fade 1600ms both; 
   @for $i from 1 through 3 {
+
   
     &--#{$i} {
-  
-      animation-delay: 150ms * $i;
+      animation-delay:  300ms * $i;
+      
     }
   }
 }
 
 .container__main__options--card {
-  animation: items-fade 260ms both;
+  animation: items-fade 1300ms  both;
+
 
   @for $i from 1 through 3 {
     &--#{$i} {
-      animation-delay: 150ms * $i;
+      animation-delay: 450ms * $i;
     }
   }
 }
 
 .container__desert__options--card {
-  animation: items-fade 300ms both;
+  animation: items-fade 1400ms  both;
 
   @for $i from 1 through 3 {
     &--#{$i} {
-      animation-delay: 200ms * $i;
+      animation-delay: 600ms * $i;
     }
   }
 }
@@ -2358,34 +2383,27 @@ $animation-delay: $animation-duration / 3;
 @keyframes items-fade {
   0% {
     opacity: 0;
-    transform: translateX(-90px);
+    transform: translateY(-90px);  
+
  
   }
 
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 
-.container__entry__options {
-  animation: entry both 4s;
+@keyframes container__entry {
 
-}
-.container__main__options {
-  animation: entry ease 1.5s;
-}
-.container__desert__options {
-  animation: entry ease 1.5s;
-}
-
-@keyframes entry {
   0% {
     opacity: 0;
   }
 
-  100% {
+  100%{
     opacity: 1;
   }
+  
 }
 
 
