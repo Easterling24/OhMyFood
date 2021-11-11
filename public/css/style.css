@@ -25,7 +25,7 @@ header {
   max-height: 100vh;
   position: fixed;
   height: 20px;
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
   border: 1.5px solid #494949;
   display: flex;
@@ -114,29 +114,37 @@ header {
     font-family: "Roboto";
     background: #f2f2f2;
     padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .intro h1 {
     margin-top: 0;
   }
-  .intro > button {
+  .intro__btn {
     height: 60px;
     width: 250px;
     border-radius: 25px;
     font-size: 1rem;
     font-family: "Roboto";
+    box-shadow: 0px 4px 4px #e2dede;
     border: none;
     color: white;
     background: linear-gradient(#9356DC, #FF79DA);
     transition: transform 200ms;
     cursor: pointer;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .intro > button > a {
+  .intro__btn > a {
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
   }
-  .intro > button:hover {
+  .intro__btn:hover {
     transform: scale(1.1);
   }
 
@@ -225,6 +233,9 @@ header {
     box-shadow: 0 2px 5px #b9b5b5;
     border-radius: 25px;
     height: 100%;
+  }
+  .restaurants__card {
+    position: relative;
   }
   .restaurants__card > img {
     object-fit: cover;
@@ -372,19 +383,28 @@ header {
     justify-content: center;
     align-items: center;
   }
-  .intro > button {
+  .intro__btn {
     height: 60px;
-    width: 30%;
+    width: 250px;
     border-radius: 25px;
+    font-size: 1rem;
+    font-family: "Roboto";
+    box-shadow: 0px 4px 4px #e2dede;
+    border: none;
+    color: white;
     background: linear-gradient(#9356DC, #FF79DA);
-    transition: transform 330ms ease-in-out;
-    margin-bottom: 2rem;
+    transition: transform 200ms;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
   }
-  .intro > button:hover {
+  .intro__btn:hover {
     transform: scale(1.1);
   }
-  .intro > button > a {
+  .intro__btn > a {
     text-decoration: none;
     color: white;
     font-family: "Roboto";
@@ -582,6 +602,10 @@ header {
   body {
     max-width: 700px;
     margin: auto;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   header {
@@ -609,22 +633,29 @@ header {
     font-family: "Roboto";
     background: #f2f2f2;
   }
-  .intro > button {
+  .intro__btn {
     height: 60px;
     width: 250px;
-    border: none;
     border-radius: 25px;
-    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Roboto";
+    box-shadow: 0px 4px 4px #e2dede;
+    border: none;
+    color: white;
     background: linear-gradient(#9356DC, #FF79DA);
-    transition: transform 330ms ease-in-out;
-    margin-bottom: 2rem;
+    transition: transform 200ms;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .intro > button > a {
+  .intro__btn > a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
   }
-  .intro > button:hover {
+  .intro__btn:hover {
     transform: scale(1.15);
   }
 
@@ -872,28 +903,32 @@ header {
     margin-bottom: 0;
     font-weight: 900;
   }
-  .intro > button {
-    width: 60%;
-    border-radius: 10rem;
+  .intro__btn {
     height: 60px;
-    border: none;
-    outline: none;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 600;
+    width: 250px;
+    border-radius: 25px;
+    font-size: 1rem;
     font-family: "Roboto";
+    box-shadow: 0px 4px 4px #e2dede;
+    border: none;
+    color: white;
+    background: linear-gradient(#9356DC, #FF79DA);
+    transition: transform 200ms;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     background: linear-gradient(#9356DC, #FF79DA);
     transition: transform 330ms ease-in-out;
   }
-  .intro > button:hover {
+  .intro__btn:hover {
     transform: scale(1.05);
   }
-  .intro > button > a {
+  .intro__btn > a {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1113,7 +1148,22 @@ header {
   transition: transform 330ms ease-in-out;
 }
 .restaurants__card:hover {
-  transform: scale(0.8);
+  transform: scale(0.95);
+}
+
+.restaurants__new {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  right: 5%;
+  width: 120px;
+  height: 40px;
+  background-color: #99E2D0;
+  color: white;
+  border-radius: 5px;
+  color: #278870;
 }
 
 body {
@@ -1133,7 +1183,7 @@ body {
   }
 
   .loop {
-    width: 400px;
+    width: 100%;
   }
   .loop__item > i {
     font-size: 60px;
@@ -2103,6 +2153,10 @@ body {
     align-items: center;
   }
 
+  .loop {
+    width: 100%;
+  }
+
   .back {
     position: absolute;
     left: 10%;
@@ -2539,8 +2593,6 @@ body {
   }
 
   header {
-    position: relative;
-    box-shadow: 0px;
     width: 100%;
   }
 
@@ -3061,6 +3113,7 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
+  width: 100%;
   height: 10vh;
   flex-direction: row;
   justify-content: center;
