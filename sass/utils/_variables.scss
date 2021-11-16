@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 // Text Colors
-$cd-primary: #9356DC;
-$cd-secondary: #FF79DA;
-$cd-tertiary: #99E2D0;
-
-
+$cd-primary: #9356dc;
+$cd-secondary: #ff79da;
+$cd-tertiary: #99e2d0;
 
 // Background Colors
 
@@ -14,21 +11,91 @@ $background-header: #fff;
 $background-location: rgb(231, 227, 227);
 $background-elements: #f2f2f2;
 
-
-
-
 //Borders
 
-
-
 //Size
-
 
 //Box Shadows
 
 $box_shadow-header: 0px 4px 4px rgb(192, 178, 178);
 
-
-// Font 
+// Font
 
 $font-family: "Roboto";
+
+
+
+
+$num-items: 5;
+$anim-duration: 500ms;
+$anim-delay: $anim-duration / $num-items;
+$size: 3rem;
+
+@keyframes content_loading {
+  0% {
+    opacity: 0;
+    animation-delay: 2s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes burger {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+// Displaying menu cards
+
+@keyframes items-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+// Bar Filling 
+
+@keyframes bar_filled {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0);
+  }
+
+  75% {
+    opacity: 0.7;
+    transform: scaleX(0.7);
+  }
+
+  90% {
+    opacity: 0.9;
+    transform: scaleX(0.9);
+    animation-delay: 120ms;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes content-load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
