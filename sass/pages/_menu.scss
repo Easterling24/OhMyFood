@@ -16,7 +16,6 @@ body {
   min-height: 100vh;
 }
 
-
 header {
   align-items: center;
   display: flex;
@@ -138,11 +137,10 @@ header {
     border-bottom: 2px solid $cd-tertiary;
     margin-bottom: 2rem;
     display: flex;
-    justify-content: baseline;
     align-items: center;
     margin-left: 15rem;
 
-    & > h3 {
+    & > h2 {
       text-transform: uppercase;
       font-weight: 200;
       color: lighten($color: black, $amount: 40);
@@ -510,25 +508,14 @@ header {
   }
 }
 
-footer{
-
- width: 100%;
- padding-left: 0;
-
+footer {
+  width: 100%;
+  padding-left: 0;
 }
 
 .footer {
   margin-left: 20%;
 }
-
-
-
-
-
-
-
-
-
 
 // Small Screen
 
@@ -640,7 +627,7 @@ footer{
       align-items: center;
       margin-left: 6rem;
 
-      & > h3 {
+      & > h2 {
         color: rgb(156, 154, 154);
         text-transform: uppercase;
       }
@@ -715,8 +702,6 @@ footer{
       }
     }
   }
-
-
 }
 
 //Tablet Size
@@ -736,8 +721,6 @@ footer{
     flex-direction: row;
     align-items: center;
   }
-
-
 
   .back {
     position: absolute;
@@ -832,7 +815,7 @@ footer{
       margin-top: 1rem;
       width: 35px;
       border-bottom: 2px solid $cd-tertiary;
-      & > h3 {
+      & > h2 {
         color: rgb(156, 154, 154);
         text-transform: uppercase;
         margin: 0;
@@ -843,7 +826,6 @@ footer{
   .footer {
     margin-left: 7%;
   }
-  
 
   .container__entry__options--card {
     width: 80%;
@@ -861,14 +843,12 @@ footer{
 
 @media only screen and (max-width: 581px) {
   body {
-
     margin: auto;
   }
 
-  header{
+  header {
     width: 100%;
   }
-
 
   .loop {
     width: 100px;
@@ -1011,7 +991,7 @@ footer{
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 180px;
+                width: 160px;
                 overflow-x: hidden;
               }
 
@@ -1019,7 +999,7 @@ footer{
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 180px;
+                  width: 160px;
                   overflow-x: hidden;
                 }
               }
@@ -1057,7 +1037,7 @@ footer{
             justify-content: space-between;
             position: relative;
 
-            &>p{
+            & > p {
               text-overflow: ellipsis;
               width: 180px;
               overflow-x: hidden;
@@ -1137,7 +1117,7 @@ footer{
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 180px;
+                width: 160px;
                 overflow-x: hidden;
               }
 
@@ -1145,7 +1125,7 @@ footer{
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 180px;
+                  width: 160px;
                   overflow-x: hidden;
                   transition: all 400ms ease-in-out;
                 }
@@ -1175,7 +1155,6 @@ footer{
             width: 180px;
             overflow-x: hidden;
             white-space: nowrap;
-            
           }
 
           & > div {
@@ -1189,8 +1168,6 @@ footer{
               width: 180px;
               overflow-x: hidden;
               white-space: nowrap;
-
-
             }
           }
         }
@@ -1255,7 +1232,7 @@ footer{
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 180px;
+                width: 160px;
                 overflow-x: hidden;
               }
 
@@ -1263,7 +1240,7 @@ footer{
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 180px;
+                  width: 160px;
                   overflow-x: hidden;
                 }
               }
@@ -1300,7 +1277,7 @@ footer{
             align-items: center;
             justify-content: space-between;
             position: relative;
-            & > p{
+            & > p {
               text-overflow: ellipsis;
               width: 180px;
               overflow-x: hidden;
@@ -1392,7 +1369,6 @@ footer{
   .footer {
     margin-left: 10%;
   }
-  
 
   .container__main {
     .option--price {
@@ -1407,8 +1383,6 @@ footer{
   }
 
   // Footer
-
-  
 }
 
 // Menu Aniations Global
@@ -1417,50 +1391,54 @@ body {
   background: rgb(24, 5, 5);
 }
 
+//
 
+.container__entry {
+  animation: container-fade-in 300ms 0ms both;
+}
 
-// body {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.container__main {
+  animation: container-fade-in 600ms 0ms both;
+}
 
+.container__desert {
+  animation: container-fade-in 800ms 0ms both;
+}
 
+// Menu title animation loop
 
-// .content__loaded {
-//   animation: content_loading 0s 1s both;
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-// }
+.container__title {
+  animation: title-fade-in 500ms both;
+
+  @for $i from 1 through 3 {
+    animation-delay: 400ms * $i;
+  }
+}
 
 .container__entry__options--card {
-  animation: items-fade 700ms both;
-  
+  animation: items-fade $anim-duration both;
+
   @for $i from 1 through 3 {
     &--#{$i} {
-      animation-delay: 300ms * $i;
+      animation-delay: $anim-delay * $i;
     }
   }
 }
 
 .container__main__options--card {
-
-  animation: items-fade 700ms  both;
+  animation: items-fade $anim-duration-1 both;
   @for $i from 1 through 3 {
     &--#{$i} {
-      animation-delay: 300ms * $i;
+      animation-delay: $anim-delay-1 * $i;
     }
   }
 }
 
 .container__desert__options--card {
-  animation: items-fade 700ms  both;
+  animation: items-fade $anim-duration-2 both;
   @for $i from 1 through 3 {
     &--#{$i} {
-      animation-delay: 300ms * $i;
+      animation-delay: $anim-delay-2 * $i;
     }
   }
 }

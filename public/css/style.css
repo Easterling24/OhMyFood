@@ -57,6 +57,23 @@
     opacity: 1;
   }
 }
+@keyframes container-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    animation-delay: 300ms;
+  }
+}
+@keyframes title-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   scroll-behavior: smooth;
 }
@@ -387,6 +404,9 @@ footer {
 }
 .footer__legal {
   padding-top: 0;
+}
+.footer__legal > p {
+  margin: 0.2rem 0;
 }
 .footer__info {
   display: flex;
@@ -1272,11 +1292,10 @@ header a {
   border-bottom: 2px solid #99e2d0;
   margin-bottom: 2rem;
   display: flex;
-  justify-content: baseline;
   align-items: center;
   margin-left: 15rem;
 }
-.container__title > h3 {
+.container__title > h2 {
   text-transform: uppercase;
   font-weight: 200;
   color: #666666;
@@ -1710,7 +1729,7 @@ footer {
     align-items: center;
     margin-left: 6rem;
   }
-  .container .container__title > h3 {
+  .container .container__title > h2 {
     color: #9c9a9a;
     text-transform: uppercase;
   }
@@ -1871,7 +1890,7 @@ footer {
     width: 35px;
     border-bottom: 2px solid #99e2d0;
   }
-  .container .container__title > h3 {
+  .container .container__title > h2 {
     color: #9c9a9a;
     text-transform: uppercase;
     margin: 0;
@@ -2026,13 +2045,13 @@ footer {
   .container__entry__options--card:hover .container__entry__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover .container__entry__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover i {
@@ -2126,13 +2145,13 @@ footer {
   .container__main__options--card:hover .container__main__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
   }
   .container__main__options--card:hover .container__main__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
     transition: all 400ms ease-in-out;
   }
@@ -2223,13 +2242,13 @@ footer {
   .container__desert__options--card:hover .container__desert__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover .container__desert__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 180px;
+    width: 160px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover i {
@@ -2355,43 +2374,62 @@ body {
   background: #180505;
 }
 
+.container__entry {
+  animation: container-fade-in 300ms 0ms both;
+}
+
+.container__main {
+  animation: container-fade-in 600ms 0ms both;
+}
+
+.container__desert {
+  animation: container-fade-in 800ms 0ms both;
+}
+
+.container__title {
+  animation: title-fade-in 500ms both;
+  animation-delay: 400ms;
+  animation-delay: 800ms;
+  animation-delay: 1200ms;
+}
+
 .container__entry__options--card {
-  animation: items-fade 700ms both;
+  animation: items-fade 600ms both;
 }
 .container__entry__options--card--1 {
-  animation-delay: 300ms;
+  animation-delay: 200ms;
 }
 .container__entry__options--card--2 {
-  animation-delay: 600ms;
+  animation-delay: 400ms;
 }
 .container__entry__options--card--3 {
-  animation-delay: 900ms;
+  animation-delay: 600ms;
 }
 
 .container__main__options--card {
-  animation: items-fade 700ms both;
+  animation: items-fade 1000ms both;
 }
 .container__main__options--card--1 {
-  animation-delay: 300ms;
+  animation-delay: 333.3333333333ms;
 }
 .container__main__options--card--2 {
-  animation-delay: 600ms;
+  animation-delay: 666.6666666667ms;
 }
 .container__main__options--card--3 {
-  animation-delay: 900ms;
+  animation-delay: 1000ms;
 }
 
 .container__desert__options--card {
-  animation: items-fade 700ms both;
+  animation: items-fade 1400ms both;
 }
 .container__desert__options--card--1 {
-  animation-delay: 300ms;
+  animation-delay: 466.6666666667ms;
 }
 .container__desert__options--card--2 {
-  animation-delay: 600ms;
+  animation-delay: 933.3333333333ms;
 }
 .container__desert__options--card--3 {
-  animation-delay: 900ms;
+  animation-delay: 1400ms;
 }
 
 /*# sourceMappingURL=style.css.map */

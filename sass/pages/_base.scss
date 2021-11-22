@@ -372,6 +372,9 @@ footer {
   }
   &__legal {
     padding-top: 0;
+    & > p {
+      margin: 0.2rem 0;
+    }
   }
 
   &__info {
