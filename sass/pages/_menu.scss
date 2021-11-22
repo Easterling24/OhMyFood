@@ -981,7 +981,7 @@ footer {
             }
 
             .option--price {
-              transform: translateX(-50px);
+              transform: translateX(-70px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -989,7 +989,7 @@ footer {
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 160px;
+                width: 140px;
                 overflow-x: hidden;
               }
 
@@ -997,7 +997,7 @@ footer {
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 160px;
+                  width: 140px;
                   overflow-x: hidden;
                 }
               }
@@ -1107,7 +1107,7 @@ footer {
             }
 
             .option--price {
-              transform: translateX(-50px);
+              transform: translateX(-70px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -1115,7 +1115,7 @@ footer {
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 160px;
+                width: 140px;
                 overflow-x: hidden;
               }
 
@@ -1123,7 +1123,7 @@ footer {
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 160px;
+                  width: 140px;
                   overflow-x: hidden;
                   transition: all 400ms ease-in-out;
                 }
@@ -1222,7 +1222,7 @@ footer {
             }
 
             .option--price {
-              transform: translateX(-50px);
+              transform: translateX(-70px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -1230,7 +1230,7 @@ footer {
               & > h3 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: 160px;
+                width: 140px;
                 overflow-x: hidden;
               }
 
@@ -1238,7 +1238,7 @@ footer {
                 & > p {
                   text-overflow: ellipsis;
                   white-space: nowrap;
-                  width: 160px;
+                  width: 140px;
                   overflow-x: hidden;
                 }
               }
@@ -1312,7 +1312,6 @@ footer {
       margin-top: 2rem;
       margin-left: 1.5rem;
       display: flex;
-      justify-content: baseline;
       align-items: center;
       border-bottom: 2px solid $cd-tertiary;
       & > h2 {

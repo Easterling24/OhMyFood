@@ -406,6 +406,14 @@ footer {
   padding-top: 0;
 }
 .footer__legal > p {
+  margin: 0.25rem 0;
+}
+.footer__legal a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+.footer__legal a > p {
   margin: 0.2rem 0;
 }
 .footer__info {
@@ -2034,19 +2042,19 @@ footer {
     border-radius: 0 25px 25px 0;
   }
   .container__entry__options--card:hover .option--price {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
     transition: transform 330ms ease-in-out;
   }
   .container__entry__options--card:hover .container__entry__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover .container__entry__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
   }
   .container__entry__options--card:hover i {
@@ -2134,19 +2142,19 @@ footer {
     border-radius: 0 25px 25px 0;
   }
   .container__main__options--card:hover .option--price {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
     transition: transform 330ms ease-in-out;
   }
   .container__main__options--card:hover .container__main__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
   }
   .container__main__options--card:hover .container__main__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
     transition: all 400ms ease-in-out;
   }
@@ -2231,19 +2239,19 @@ footer {
     border-radius: 0 25px 25px 0;
   }
   .container__desert__options--card:hover .option--price {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
     transition: transform 330ms ease-in-out;
   }
   .container__desert__options--card:hover .container__desert__options--desc > h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover .container__desert__options--desc div > p {
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 160px;
+    width: 140px;
     overflow-x: hidden;
   }
   .container__desert__options--card:hover i {
@@ -2305,7 +2313,6 @@ footer {
     margin-top: 2rem;
     margin-left: 1.5rem;
     display: flex;
-    justify-content: baseline;
     align-items: center;
     border-bottom: 2px solid #99e2d0;
   }
