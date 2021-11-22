@@ -16,20 +16,12 @@ body {
   min-height: 100vh;
 }
 
-.loop {
-  width: 100%;
-
-  &__item {
-    & > i {
-      font-size: 60px;
-    }
-  }
-}
 
 header {
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   a {
     text-decoration: none;
@@ -48,7 +40,7 @@ header {
 
 .back {
   position: absolute;
-  left: 5%;
+  left: 18%;
 
   & > a {
     & > i {
@@ -64,6 +56,7 @@ header {
   align-items: center;
   position: relative;
   background: #fff;
+  width: 100%;
 
   &__img {
     height: 280px;
@@ -517,6 +510,26 @@ header {
   }
 }
 
+footer{
+
+ width: 100%;
+ padding-left: 0;
+
+}
+
+.footer {
+  margin-left: 20%;
+}
+
+
+
+
+
+
+
+
+
+
 // Small Screen
 
 @media only screen and (max-width: 1099px) {
@@ -538,7 +551,7 @@ header {
 
   .back {
     position: absolute;
-    left: 10%;
+    left: 20%;
     & > a {
       text-decoration: none;
       color: black;
@@ -703,11 +716,7 @@ header {
     }
   }
 
-  .footer__legal {
-    p {
-      margin-bottom: 0.5rem;
-    }
-  }
+
 }
 
 //Tablet Size
@@ -728,13 +737,11 @@ header {
     align-items: center;
   }
 
-  .loop {
-    width: 100%;
-  }
+
 
   .back {
     position: absolute;
-    left: 10%;
+    left: 15%;
 
     & > a {
       text-decoration: none;
@@ -755,7 +762,7 @@ header {
 
     &__img {
       width: 100%;
-      height: 300px;
+      height: 250px;
       border-radius: 25px;
 
       & > img {
@@ -833,6 +840,11 @@ header {
     }
   }
 
+  .footer {
+    margin-left: 7%;
+  }
+  
+
   .container__entry__options--card {
     width: 80%;
   }
@@ -849,14 +861,14 @@ header {
 
 @media only screen and (max-width: 581px) {
   body {
-    max-width: 470px;
+
     margin: auto;
-    align-items: center;
   }
 
-  header {
-    height: 5vh;
+  header{
+    width: 100%;
   }
+
 
   .loop {
     width: 100px;
@@ -930,7 +942,7 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 80%;
+        width: 90%;
 
         & > h2 {
           font-family: "Shrikhand";
@@ -991,7 +1003,7 @@ header {
             }
 
             .option--price {
-              transform: translateX(-70px);
+              transform: translateX(-50px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -1044,6 +1056,13 @@ header {
             align-items: center;
             justify-content: space-between;
             position: relative;
+
+            &>p{
+              text-overflow: ellipsis;
+              width: 180px;
+              overflow-x: hidden;
+              white-space: nowrap;
+            }
           }
         }
 
@@ -1110,7 +1129,7 @@ header {
             }
 
             .option--price {
-              transform: translateX(-70px);
+              transform: translateX(-50px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -1152,6 +1171,11 @@ header {
           & > h3 {
             margin-bottom: 0;
             transition: all 330ms ease-in-out;
+            text-overflow: ellipsis;
+            width: 180px;
+            overflow-x: hidden;
+            white-space: nowrap;
+            
           }
 
           & > div {
@@ -1160,6 +1184,14 @@ header {
             align-items: center;
             justify-content: space-between;
             position: relative;
+            & > p {
+              text-overflow: ellipsis;
+              width: 180px;
+              overflow-x: hidden;
+              white-space: nowrap;
+
+
+            }
           }
         }
 
@@ -1215,7 +1247,7 @@ header {
             }
 
             .option--price {
-              transform: translateX(-70px);
+              transform: translateX(-50px);
               transition: transform 330ms ease-in-out;
             }
 
@@ -1256,6 +1288,10 @@ header {
           & > h3 {
             margin-bottom: 0;
             transition: all 330ms ease-in-out;
+            text-overflow: ellipsis;
+            width: 180px;
+            overflow-x: hidden;
+            white-space: nowrap;
           }
 
           & > div {
@@ -1264,6 +1300,12 @@ header {
             align-items: center;
             justify-content: space-between;
             position: relative;
+            & > p{
+              text-overflow: ellipsis;
+              width: 180px;
+              overflow-x: hidden;
+              white-space: nowrap;
+            }
           }
         }
 
@@ -1309,7 +1351,7 @@ header {
       background: linear-gradient($cd-primary, $cd-secondary);
       position: relative;
       margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -1347,6 +1389,11 @@ header {
     }
   }
 
+  .footer {
+    margin-left: 10%;
+  }
+  
+
   .container__main {
     .option--price {
       margin-bottom: 1rem;
@@ -1361,64 +1408,7 @@ header {
 
   // Footer
 
-  footer {
-    width: 100%;
-    min-height: 20vh;
-    background-color: rgb(58, 57, 57);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    font-family: "Roboto";
-
-    &__title {
-      margin-bottom: 0;
-    }
-
-    &__suggest {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 0;
-      padding: 0;
-      height: 30px;
-      & > h3 {
-        margin-left: 1rem;
-        margin: 0.5rem;
-        color: white;
-      }
-    }
-
-    &__partner {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      height: 30px;
-
-      & > h3 {
-        margin-left: 1rem;
-        margin: 0.5rem;
-        color: white;
-      }
-    }
-
-    &__legal {
-      & > p {
-        margin: 0.25px 0;
-      }
-    }
-
-    i {
-      color: white;
-    }
-  }
+  
 }
 
 // Menu Aniations Global
@@ -1427,59 +1417,28 @@ body {
   background: rgb(24, 5, 5);
 }
 
-// $num-items: 5;
-// $anim-duration: 500ms;
-// $anim-delay: $anim-duration / $num-items;
-// $size: 3rem;
 
-body {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.loop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
+// body {
+//   position: relative;
+//   min-height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $cd-primary;
-    margin: 1rem;
-    animation: burger $anim-duration backwards infinite ease-in-out alternate;
-    @for $i from 1 through 5 {
-      &--#{$i} {
-        animation-delay: $anim-delay * $i;
-      }
-    }
 
-    & > i {
-      font-size: $size;
-    }
-  }
-}
 
-.content__loaded {
-  animation: content_loading 0s 1s both;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
+// .content__loaded {
+//   animation: content_loading 0s 1s both;
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+// }
 
 .container__entry__options--card {
-  animation: items-fade 1300ms 4s both;
+  animation: items-fade 700ms both;
+  
   @for $i from 1 through 3 {
     &--#{$i} {
       animation-delay: 300ms * $i;
@@ -1488,7 +1447,8 @@ body {
 }
 
 .container__main__options--card {
-  animation: items-fade 1500ms 4s both;
+
+  animation: items-fade 700ms  both;
   @for $i from 1 through 3 {
     &--#{$i} {
       animation-delay: 300ms * $i;
@@ -1497,7 +1457,7 @@ body {
 }
 
 .container__desert__options--card {
-  animation: items-fade 1700ms 4s both;
+  animation: items-fade 700ms  both;
   @for $i from 1 through 3 {
     &--#{$i} {
       animation-delay: 300ms * $i;

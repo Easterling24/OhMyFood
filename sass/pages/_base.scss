@@ -13,7 +13,14 @@ body {
 }
 
 header {
-  box-shadow: 0px 4px 4px #c0b2b2;
+  min-height: 3vh;
+  background-color: $background-header;
+  box-shadow: $box_shadow-header;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .progress {
@@ -52,8 +59,7 @@ header {
   animation: content-load 0ms 2.5s both;
 }
 
-//Desktop Screen
-// @media only screen and (min-width: 1000px) {
+
 body {
   max-width: 1200px;
   margin: auto;
@@ -61,15 +67,12 @@ body {
 
 header {
   background: #fff;
-  min-height: 10vh;
   text-align: center;
   margin-bottom: 0;
 
   .logo {
     padding: 10px;
-    & > img {
-      // height: 50px;
-    }
+  
   }
 }
 
@@ -80,8 +83,52 @@ header {
   justify-content: center;
   background: $background-location;
   font-family: "Roboto";
+  padding: 2rem 0;
+
+
+
   &__icon {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__border {
+    height: 2px;
+    width: 100%;
+    background: black;
+    transform-origin: 50%;
+    transform: scale(0);
+    transition: transform 330ms ease-in-out;
+  }
+
+  &__border__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    & > input {
+      background: transparent;
+      cursor: pointer;
+      height: 40px;
+      width: 150px;
+      font-size: 1.2rem;
+      text-align: center;
+      color: black;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      outline: none;
+      border: 0;
+
+      &:hover + div {
+        transform: scale(1);
+      }
+    }
   }
 }
 
@@ -237,6 +284,16 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 0 1rem;
+
+      &--description{
+        & > h3 {
+          margin-bottom: 0;
+        }
+        & > p{
+          margin-top: 0.5rem;
+        }
+
+      }
       &--icon {
         padding-right: 1rem;
         position: relative;
@@ -282,34 +339,59 @@ header {
   }
 }
 
+
 footer {
+
+  min-height: 20vh;
+  background-color: rgb(58, 57, 57);
   display: flex;
-  justify-content: center;
-  background-color: #4b4a4a;
+  flex-direction: column;
+  padding-left: 20%;
+  
 }
 
 .footer {
-  min-height: 15vh;
-  font-family: "Roboto";
-  padding-top: 1rem;
+  padding-left: 4rem;
+  width: 70%;
   display: flex;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 1rem;
+  // margin-left: 1.5rem;
+  padding-left: 0;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-family: "Roboto";
+  color: #fff;
 
   &__title {
     font-family: "Shrikhand";
-    color: white;
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+  }
+  &__legal {
+    padding-top: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  
   }
 
   &__suggest {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0;
+    padding: 0;
+    height: 30px;
     & > h3 {
-      margin-left: 10px;
+      margin-left: 1.5rem;
+      color: white;
     }
   }
 
@@ -317,29 +399,21 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 30px;
+
     & > h3 {
-      margin-left: 10px;
-    }
-  }
-  &__legal {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0.5rem;
-    & > p {
-      margin: 0;
+      margin-left: 1rem;
+      color: white;
     }
   }
 
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+  & > p {
+    margin: 0;
     color: white;
-    width: 100%;
-    & > div {
-      display: flex;
-      justify-content: center;
-    }
+  }
+
+  i {
+    color: white;
   }
 }
 
@@ -355,8 +429,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     background: #fff;
+    height: 10vh;
   }
 
   .logo {
@@ -494,11 +568,11 @@ footer {
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
+    flex-direction: column;
       justify-content: space-evenly;
 
       & > a {
-        width: 350px;
+        width: 80%;
         text-decoration: none;
         color: black;
       }
@@ -530,7 +604,6 @@ footer {
 
         p {
           margin-top: 0;
-          margin-bottom: 2.5rem;
         }
 
         &--description {
@@ -576,61 +649,11 @@ footer {
     }
   }
 
-  .footer {
-    min-height: 15vh;
-    font-family: "Roboto";
-    // background-color: rgb(75, 74, 74);
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
+  // footer {
+  //   padding-left: 5%;
+  // }
 
-    &__title {
-      font-family: "Shrikhand";
-      color: white;
-      text-align: center;
-    }
-
-    &__suggest {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      & > h3 {
-        margin-left: 10px;
-      }
-    }
-
-    &__partner {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      & > h3 {
-        margin-left: 10px;
-      }
-    }
-    &__legal {
-      display: flex;
-      flex-direction: column;
-      padding-top: 1.5rem;
-      & > p {
-        margin: 0;
-        margin-bottom: 0.5rem;
-      }
-    }
-
-    &__info {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      color: white;
-      width: 100%;
-      & > div {
-        display: flex;
-        justify-content: center;
-      }
-    }
-  }
+  
 }
 
 // Tablet
@@ -646,10 +669,14 @@ footer {
   }
 
   header {
+    height: 10vh;
+    background-color: $background-header;
+    box-shadow: $box_shadow-header;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    z-index: 1;
   }
   .location {
     background: #e7e3e3;
@@ -658,7 +685,7 @@ footer {
 
   .logo {
     > img {
-      height: 60px;
+      height: 40px;
     }
   }
 
@@ -798,11 +825,11 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 2rem;
+
 
         &--description {
           > p {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
           }
 
           > h3 {
@@ -815,7 +842,6 @@ footer {
           justify-content: center;
           align-items: center;
           position: relative;
-          margin-right: 1rem;
 
           &:hover {
             .fas {
@@ -846,59 +872,8 @@ footer {
     }
   }
 
-  .footer {
-    min-height: 15vh;
-    font-family: "Roboto";
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-
-    &__title {
-      font-family: "Shrikhand";
-      color: white;
-      text-align: center;
-    }
-
-    &__suggest {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      & > h3 {
-        margin-left: 10px;
-      }
-    }
-
-    &__partner {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      & > h3 {
-        margin-left: 10px;
-      }
-    }
-    &__legal {
-      display: flex;
-      flex-direction: column;
-      padding-top: 1.5rem;
-      & > p {
-        margin: 0;
-        margin-bottom: 0.5rem;
-      }
-    }
-
-    &__info {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      color: white;
-      width: 100%;
-      & > div {
-        display: flex;
-        justify-content: center;
-      }
-    }
+  footer {
+    padding-left: 8%;
   }
 }
 
@@ -909,7 +884,7 @@ footer {
   }
 
   header {
-    min-height: 5vh;
+
     background-color: $background-header;
     box-shadow: $box_shadow-header;
     margin-bottom: 0;
@@ -933,7 +908,6 @@ footer {
     background: $background-location;
     position: relative;
     display: flex;
-    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -1020,7 +994,7 @@ footer {
 
     & > h2 {
       text-align: left;
-      margin-left: 1.5rem;
+
     }
 
     &__options {
@@ -1054,14 +1028,15 @@ footer {
           color: white;
         }
 
-        &--icon {
+        &--icon { 
           position: absolute;
           display: flex;
           justify-content: center;
           align-items: center;
-          left: 10%;
+          left: 7%;
           height: 40px;
           width: 40px;
+     
           color: rgb(180, 172, 172);
         }
       }
@@ -1123,7 +1098,7 @@ footer {
         padding: 0 10px;
 
         &--description {
-          margin-top: 2rem;
+         
           & > h3 {
             margin: 0.5rem 0;
           }
@@ -1186,20 +1161,18 @@ footer {
   }
 
   footer {
-    width: 100%;
     min-height: 20vh;
     background-color: rgb(58, 57, 57);
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
   }
 
   .footer {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    margin-top: 1rem;
-    // margin-left: 1.5rem;
-    padding-left: 0;
+    margin-top: 1rem; 
     padding-bottom: 1rem;
     padding-top: 1rem;
     font-family: "Roboto";
@@ -1207,6 +1180,8 @@ footer {
 
     &__title {
       font-family: "Shrikhand";
+      margin-bottom: 2rem;
+
     }
     &__legal {
       padding-top: 0;
@@ -1217,9 +1192,7 @@ footer {
       flex-direction: column;
       justify-content: flex-start;
       align-items: baseline;
-      // & > div {
-      //   width: 80%;
-      // }
+    
     }
 
     &__suggest {
@@ -1258,16 +1231,6 @@ footer {
   }
 }
 
-// Scale Images on Hove
-
-.restaurants__card {
-  transform: scale(1);
-  transition: transform 330ms ease-in-out;
-
-  &:hover {
-    transform: scale(0.95);
-  }
-}
 
 .restaurants__new {
   position: absolute;
