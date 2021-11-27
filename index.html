@@ -17,16 +17,32 @@
   </head>
 
   <body>
-    <div class="progress">
-      <div class="progress__bar"></div>
-    </div>
+    <!-- Spinner Animation -->
 
+    <!-- <div class="animation__container">
+      <div class="animation__container__btn">
+        <div class="animation__container__ball--1">
+          <i class="fas fa-pizza-slice"></i>
+        </div>
+        <div class="animation__container__ball--2">
+          <i class="fas fa-hotdog"></i>
+        </div>
+        <div class="animation__container__ball--3">
+          <i class="fas fa-hamburger"></i>
+        </div>
+        <div class="animation__container__ball--4">
+          <i class="fas fa-fish"></i>
+        </div>
+      </div>
+    </div> -->
     <div class="content-loaded">
       <header>
         <div class="logo">
           <img src="images/logo/ohmyfood.png" alt="ohmyfood brand logo" />
         </div>
       </header>
+
+      <!-- Localisation et possibilité de la chnager avec hover -->
 
       <div class="location">
         <div class="location__icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -49,7 +65,9 @@
         </div>
       </div>
 
-      <section class="instruction">
+      <!-- Block informatif quant à l'utilisation de l'application -->
+
+      <article class="instruction">
         <h2>Fonctionnement</h2>
 
         <div class="instruction__options">
@@ -75,15 +93,19 @@
             <p>Dégustez au restaurant</p>
           </div>
         </div>
-      </section>
+      </article>
 
-      <article id="rest" class="restaurants">
+      <!-- Container pour les restuarants -->
+
+      <section id="rest" class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
 
-        <section class="restaurants__list">
+        <div class="restaurants__list">
+
+          <!-- Restaurant 1 -->
           <a id="a" href="palette-du-gout.html">
             <div id="rest1" class="restaurants__card">
-              <img src="./images/places/r1.jpg" alt="restaurant palette-du-gout" />
+              <img src="./images/places/r1.jpg" alt="restaurant palette-du-gout"/>
 
               <div class="restaurants__card__info">
                 <div class="restaurants__card__info--description">
@@ -101,10 +123,10 @@
             </div>
           </a>
 
+           <!-- Restaurant 2 -->
           <a href="note-enchantee.html">
             <div class="restaurants__card">
-              <img src="./images/places/r2.jpg" alt="restaurant note-enchantee" />
-
+              <img src="./images/places/r2.jpg" alt="restaurant note-enchantee"/>
               <div class="restaurants__card__info">
                 <div class="restaurants__card__info--description">
                   <h3>La note enchantée</h3>
@@ -119,10 +141,13 @@
               <div class="restaurants__new">Nouveau</div>
             </div>
           </a>
-
+         <!-- Restaurant 3 -->
           <a href="a-la-francaise.html">
             <div class="restaurants__card">
-              <img src="./images/places/r3.jpg" alt="restaurant a-la-francaise" />
+              <img
+                src="./images/places/r3.jpg"
+                alt="restaurant a-la-francaise"
+              />
 
               <div class="restaurants__card__info">
                 <div class="restaurants__card__info--description">
@@ -137,10 +162,13 @@
               </div>
             </div>
           </a>
-
+            <!-- Restaurant 4-->
           <a href="delice-des-sens.html">
             <div class="restaurants__card">
-              <img src="./images/places/r4.jpg" alt="restaurant delice-des-sens" />
+              <img
+                src="./images/places/r4.jpg"
+                alt="restaurant delice-des-sens"
+              />
 
               <div class="restaurants__card__info">
                 <div class="restaurants__card__info--description">
@@ -155,8 +183,9 @@
               </div>
             </div>
           </a>
-        </section>
-      </article>
+        </div>
+      </section>
+
 
       <footer>
         <div class="footer">
@@ -175,7 +204,9 @@
 
             <div class="footer__legal">
               <p>Mentions légales</p>
-              <a href="mailto:yevgeni.gupalo@gmail.com"><p>Contact</p></a> 
+              <a href="mailto:yevgeni.gupalo@gmail.com">
+                <p>Contact</p>
+              </a>
             </div>
           </div>
         </div>

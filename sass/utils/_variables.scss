@@ -11,6 +11,10 @@ $background-header: #fff;
 $background-location: rgb(231, 227, 227);
 $background-elements: #f2f2f2;
 
+//Linear Gradient Colors Background
+
+
+
 //Box Shadows
 
 $box_shadow-header: 0px 4px 4px rgb(192, 178, 178);
@@ -43,14 +47,7 @@ $anim-delay-2: $anim-duration-2 / 3;
   }
 }
 
-@keyframes burger {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
+
 
 // Displaying menu cards
 
@@ -66,30 +63,19 @@ $anim-delay-2: $anim-duration-2 / 3;
   }
 }
 
+
+// Animating Entry Spinner
+
+//Animated Variables to be used
+
+$spinner-duration: 3000ms;
+$spinner-delay: 100ms; 
+$content-delay : $spinner-duration + $spinner-delay;
+
+
 // Bar Filling
 
-@keyframes bar_filled {
-  0% {
-    opacity: 0.2;
-    transform: scaleX(0);
-  }
 
-  75% {
-    opacity: 0.7;
-    transform: scaleX(0.7);
-  }
-
-  90% {
-    opacity: 0.9;
-    transform: scaleX(0.9);
-    animation-delay: 120ms;
-  }
-
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-}
 
 @keyframes content-load {
   from {

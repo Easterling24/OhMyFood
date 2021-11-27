@@ -78,7 +78,7 @@ header {
       justify-content: center;
       justify-content: space-around;
 
-      & > h1 {
+      & > h2 {
         font-family: "Shrikhand";
         font-size: 2rem;
       }
@@ -420,81 +420,37 @@ header {
     }
   }
 
-  &__btn {
-    height: 80px;
-    width: 30%;
-    border-radius: 30px;
-    background: linear-gradient($cd-primary, $cd-secondary);
-    position: absolute;
-    bottom: 6%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 10px rgb(170, 167, 167);
-    font-family: "Roboto";
-    font-size: 1.7rem;
-    color: white;
-    z-index: 1;
-    transform: scale(1);
-    transition: transform 330ms ease-in-out;
-    transition: all 330ms ease-in-out;
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-
-      transform: scale(1.15);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: linear-gradient(to right, $cd-primary, $cd-secondary);
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      opacity: 0;
-      z-index: -1;
-      border-radius: 30px;
-      transition: opacity 330ms;
-    }
-  }
+  // Eclairsissement du bouton lors de hover
 
   &__btn {
-    height: 70px;
-    width: 30%;
     border-radius: 30px;
     background: linear-gradient($cd-primary, $cd-secondary);
     position: relative;
     cursor: pointer;
     margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1.5rem;
     box-shadow: 0 3px 10px rgb(170, 167, 167);
     font-family: "Roboto";
     font-size: 1.7rem;
     color: white;
     z-index: 1;
-    transform: scale(1);
     transition: transform 330ms ease-in-out;
     transition: all 330ms ease-in-out;
-
     &:hover {
-      &::after {
+      &::after{
         opacity: 1;
       }
-
-      transform: scale(1.15);
     }
+
+
 
     &::after {
       content: "";
       position: absolute;
-      background: linear-gradient(to right, $cd-primary, $cd-secondary);
+      background: linear-gradient(
+        lighten($cd-primary, 5),
+        lighten($cd-secondary, 5)
+      );
       top: 0;
       bottom: 0;
       right: 0;
@@ -502,6 +458,7 @@ header {
       opacity: 0;
       z-index: -1;
       border-radius: 30px;
+      box-shadow: 0 0 10px 5px rgb(211, 207, 207);
       transition: opacity 330ms;
     }
   }
@@ -655,50 +612,6 @@ footer {
     .container__desert {
       width: 90%;
     }
-
-    &__btn {
-      height: 70px;
-      width: 30%;
-      border-radius: 30px;
-      background: linear-gradient($cd-primary, $cd-secondary);
-
-      position: relative;
-      margin: 2rem 0;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 3px 10px rgb(170, 167, 167);
-      font-family: "Roboto";
-      font-size: 1.7rem;
-      color: white;
-      z-index: 1;
-      transform: scale(1);
-      transition: transform 330ms ease-in-out;
-      transition: all 330ms ease-in-out;
-
-      &:hover {
-        &::after {
-          opacity: 1;
-        }
-
-        transform: scale(1.15);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        background: linear-gradient(to right, $cd-primary, $cd-secondary);
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-        border-radius: 30px;
-        transition: opacity 330ms;
-      }
-    }
   }
 }
 
@@ -767,7 +680,8 @@ footer {
         align-items: center;
         justify-content: space-between;
         width: 70%;
-        & > h1 {
+        & > h2
+         {
           font-family: "Shrikhand";
         }
       }
@@ -922,7 +836,7 @@ footer {
         justify-content: space-between;
         width: 90%;
 
-        & > h1 {
+        & > h2 {
           font-family: "Shrikhand";
           font-size: 2rem;
         }
@@ -1318,49 +1232,7 @@ footer {
         font-weight: 300;
       }
     }
-    &__btn {
-      height: 60px;
-      width: 60%;
-      border-radius: 30px;
-      background: linear-gradient($cd-primary, $cd-secondary);
-      position: relative;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 3px 10px rgb(170, 167, 167);
-      font-family: "Roboto";
-      font-size: 1.2rem;
-      color: white;
-      z-index: 1;
-      transform: scale(1);
-      transition: transform 330ms ease-in-out;
-      transition: all 330ms ease-in-out;
-
-      &:hover {
-        &::after {
-          opacity: 1;
-        }
-
-        transform: scale(1.15);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        background: linear-gradient(to right, $cd-primary, $cd-secondary);
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-        border-radius: 30px;
-        transition: opacity 330ms;
-      }
-    }
+ 
   }
 
   .footer {
