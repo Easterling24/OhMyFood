@@ -5,12 +5,7 @@
   scroll-behavior: smooth;
 }
 
-body {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-}
+
 
 header {
   min-height: 3vh;
@@ -26,8 +21,11 @@ header {
 // Loading main content after animation has finished performing
 
 body {
-  max-width: 1200px;
-  margin: auto;
+  // max-width: 1200px;
+  // margin: auto;
+ 
+  // height: 100%;
+  // width: 100%;
 }
 
 header {
@@ -616,10 +614,8 @@ footer {
   body {
     max-width: 700px;
     margin: auto;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
+
+ 
   }
 
   header {
@@ -1132,19 +1128,23 @@ footer {
 // Content comprising elements from header to footer
 
 .content-loaded {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  max-width: 1200px;
-  overflow: auto;
-  animation: content-load 0ms $content-delay both;
+position:fixed;
+height: 100%;
+width: 100%;
+max-width: 1200px;
+overflow: auto;
+z-index: 1;
+animation: content-load 0ms $content-delay both;
 }
 
 // Spinner Animationon first page
 
 .animation__container {
   position: absolute;
-
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;

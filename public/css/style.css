@@ -51,13 +51,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
 header {
   min-height: 3vh;
   background-color: #fff;
@@ -67,11 +60,6 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 1;
-}
-
-body {
-  max-width: 1200px;
-  margin: auto;
 }
 
 header {
@@ -591,10 +579,6 @@ footer {
   body {
     max-width: 700px;
     margin: auto;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
   }
 
   header {
@@ -1053,11 +1037,16 @@ footer {
   width: 100%;
   max-width: 1200px;
   overflow: auto;
+  z-index: 1;
   animation: content-load 0ms 3100ms both;
 }
 
 .animation__container {
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
