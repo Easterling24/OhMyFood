@@ -75,10 +75,10 @@ header {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
       justify-content: space-around;
+      padding: 0 3.5rem;
 
-      & > h2 {
+      & > h1 {
         font-family: "Shrikhand";
         font-size: 2rem;
       }
@@ -86,8 +86,6 @@ header {
 
     &--icon {
       position: relative;
-      margin-right: 2rem;
-
       cursor: pointer;
       width: 35px;
 
@@ -532,8 +530,9 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 70%;
-        & > h2 {
+        width: 50%;
+        padding: 0 2rem;
+        & > h1 {
           font-family: "Shrikhand";
         }
       }
@@ -680,7 +679,7 @@ footer {
         align-items: center;
         justify-content: space-between;
         width: 70%;
-        & > h2
+        & > h1
          {
           font-family: "Shrikhand";
         }
@@ -836,7 +835,7 @@ footer {
         justify-content: space-between;
         width: 90%;
 
-        & > h2 {
+        & > h1 {
           font-family: "Shrikhand";
           font-size: 2rem;
         }
@@ -858,7 +857,7 @@ footer {
       }
 
       &--header {
-        > h2 {
+        > h1 {
           font-size: 1.5rem;
         }
       }
@@ -885,7 +884,7 @@ footer {
           box-shadow: 0px 3px 4px rgb(196, 191, 191);
           border-radius: 25px;
           height: 80px;
-          width: 90%;
+          width: 100%;
           margin-bottom: 1rem;
           overflow-x: hidden;
           &:hover {
@@ -1009,7 +1008,7 @@ footer {
           box-shadow: 0px 3px 4px rgb(196, 191, 191);
           border-radius: 25px;
           height: 80px;
-          width: 90%;
+          width: 100%;
           margin-bottom: 1rem;
           overflow-x: hidden;
           animation: items-fade $anim-duration;
@@ -1126,7 +1125,7 @@ footer {
           box-shadow: 0px 3px 4px rgb(196, 191, 191);
           border-radius: 25px;
           height: 80px;
-          width: 90%;
+          width: 100%;
           margin-bottom: 1rem;
           overflow-x: hidden;
           &:hover {

@@ -5,8 +5,6 @@
   scroll-behavior: smooth;
 }
 
-
-
 header {
   min-height: 3vh;
   background-color: $background-header;
@@ -18,20 +16,11 @@ header {
   z-index: 1;
 }
 
-// Loading main content after animation has finished performing
-
-body {
-  // max-width: 1200px;
-  // margin: auto;
- 
-  // height: 100%;
-  // width: 100%;
-}
-
 header {
   background: #fff;
   text-align: center;
   margin-bottom: 0;
+  box-shadow: 0px 4px 4px #c0b2b2;
 
   .logo {
     padding: 10px;
@@ -614,8 +603,6 @@ footer {
   body {
     max-width: 700px;
     margin: auto;
-
- 
   }
 
   header {
@@ -858,8 +845,6 @@ footer {
         font-weight: 900;
       }
     }
-
-
   }
 
   .instruction {
@@ -1124,20 +1109,19 @@ footer {
   color: darken($color: $cd-tertiary, $amount: 40);
 }
 
-
 // Content comprising elements from header to footer
 
 .content-loaded {
-position:fixed;
-height: 100%;
-width: 100%;
-max-width: 1200px;
-overflow: auto;
-z-index: 1;
-animation: content-load 0ms $content-delay both;
+  position: absolute;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  overflow: auto;
+  z-index: 1;
+  animation: content-load 0ms $content-delay both;
 }
 
-// Spinner Animationon first page
 
 .animation__container {
   position: absolute;
@@ -1150,14 +1134,7 @@ animation: content-load 0ms $content-delay both;
   align-items: center;
   animation: item__remove 300ms 3.5s both;
 
-  @keyframes item__remove {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-999px);
-    }
-  }
+
 
   &__btn {
     position: relative;
@@ -1175,11 +1152,7 @@ animation: content-load 0ms $content-delay both;
     animation: spinner $spinner-duration $spinner-delay linear infinite;
   }
 
-  @keyframes spinner {
-    0% {
-      transform: rotate(360deg);
-    }
-  }
+
 
   &__ball--1 {
     content: "";
@@ -1257,5 +1230,3 @@ animation: content-load 0ms $content-delay both;
     transform: translateY(-100px);
   }
 }
-
-
