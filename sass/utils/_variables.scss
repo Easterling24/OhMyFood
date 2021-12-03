@@ -47,10 +47,10 @@ $anim-delay-2: $anim-duration-2 / 3;
 
 @keyframes item__remove {
   0% {
-    transform: translateY(0);
+    opacity: 1;
   }
   100% {
-    transform: translateY(-999px);
+    opacity: 0;
   }
 }
 
