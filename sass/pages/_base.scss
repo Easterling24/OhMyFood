@@ -8,19 +8,19 @@
 header {
   min-height: 3vh;
   background-color: $background-header;
-  box-shadow: $box_shadow-header;
   margin-bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 1;
+  z-index: 1; 
+}
+
+.header__main {
+  box-shadow: $box_shadow-header;
+
 }
 
 header {
-  background: #fff;
-  text-align: center;
-  margin-bottom: 0;
-  box-shadow: 0px 4px 4px #c0b2b2;
+ 
 
   .logo {
     padding: 10px;
@@ -35,6 +35,8 @@ header {
   background: $background-location;
   font-family: "Roboto";
   padding: 2rem 0;
+  position: relative;
+  z-index: -1;
 
   &__icon {
     margin-right: 0.5rem;
@@ -608,7 +610,6 @@ footer {
   header {
     height: 10vh;
     background-color: $background-header;
-    box-shadow: $box_shadow-header;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -793,7 +794,6 @@ footer {
 
   header {
     background-color: $background-header;
-    box-shadow: $box_shadow-header;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -803,8 +803,8 @@ footer {
 
   .logo {
     & > img {
-      height: 30px;
-      width: 150px;
+      height: 40px;
+      width: 220px;
     }
   }
 
@@ -1111,10 +1111,14 @@ footer {
 
 // Content comprising elements from header to footer
 
+section {
+  min-height: 100vh;
+}
+
 .content-loaded {
-  position: absolute;
-  display: block;
-  height: 100vh;
+
+position: fixed;
+height: 100%;
   width: 100%;
   max-width: 1200px;
   overflow-y: auto;
@@ -1132,7 +1136,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: item__remove 300ms 3.5s both;
+  animation: item__remove 0ms 3.5s both;
 
 
 

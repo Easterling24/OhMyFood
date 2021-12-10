@@ -3,21 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@keyframes content_loading {
-  0% {
-    opacity: 0;
-    animation-delay: 2s;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes item__remove {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(360deg);
   }
 }
 @keyframes items-fade {
@@ -28,11 +24,6 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-@keyframes spinner {
-  0% {
-    transform: rotate(360deg);
   }
 }
 @keyframes content-load {
@@ -58,20 +49,16 @@
 header {
   min-height: 3vh;
   background-color: #fff;
-  box-shadow: 0px 4px 4px #c0b2b2;
   margin-bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 1;
 }
 
-header {
-  background: #fff;
-  text-align: center;
-  margin-bottom: 0;
+.header__main {
   box-shadow: 0px 4px 4px #c0b2b2;
 }
+
 header .logo {
   padding: 10px;
 }
@@ -84,6 +71,8 @@ header .logo {
   background: #e7e3e3;
   font-family: "Roboto";
   padding: 2rem 0;
+  position: relative;
+  z-index: -1;
 }
 .location__icon {
   margin-right: 0.5rem;
@@ -589,7 +578,6 @@ footer {
   header {
     height: 10vh;
     background-color: #fff;
-    box-shadow: 0px 4px 4px #c0b2b2;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -752,7 +740,6 @@ footer {
 
   header {
     background-color: #fff;
-    box-shadow: 0px 4px 4px #c0b2b2;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -761,8 +748,8 @@ footer {
   }
 
   .logo > img {
-    height: 30px;
-    width: 150px;
+    height: 40px;
+    width: 220px;
   }
 
   .location {
@@ -1036,10 +1023,13 @@ footer {
   color: #278870;
 }
 
+section {
+  min-height: 100vh;
+}
+
 .content-loaded {
-  position: absolute;
-  display: block;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100%;
   max-width: 1200px;
   overflow-y: auto;
@@ -1056,7 +1046,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: item__remove 300ms 3.5s both;
+  animation: item__remove 0ms 3.5s both;
 }
 .animation__container__btn {
   position: relative;
@@ -1153,7 +1143,6 @@ body {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
   min-height: 100vh;
 }
 
