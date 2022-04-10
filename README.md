@@ -1,12 +1,13 @@
-# Project 3 "OhMyFood"
+# OpenClassroom Project 3
 
-Targeting: Food indusrty specialized in local cuisine. The user is guided throught the app. A list of dozen cards is given. 
-Once chosen, the user will be redirected to the card's detail where a set of menus will be displayed, accompagnied by an appropriate animation.
+### Enhance a app/website with  dynamic css animations [Application demo](https://easterling24.github.io/YevgeniyGupalo__P3__5102021/)
 
-Main Objectives: 
 
-- Implementing a responsive mobile version of the app. 
-- Applying advanced CSS animations
-- Structure the HTML outline
-- Apply SASS library for css optimisation and readability
-- Ensure smooth fps optimisation especially for animation displays
+
+## Project installation
+
+* Start Git bash
+* git clone https://github.com/Easterling24/YevgeniyGupalo__P3__5102021.git
+
+
+
